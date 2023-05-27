@@ -4,7 +4,7 @@ import 'package:widgets_app/config/menu/menu_item.dart';
 class HomeScreen extends StatelessWidget {
    
   const HomeScreen({Key? key}) : super(key: key);
-  
+  static const name='home_screen';
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -48,6 +48,7 @@ class _CustomListTile extends StatelessWidget {
       onTap: () {
         //TODO: Navegar a otras pantallas
         // Navigator.of(context).push(MaterialPageRoute(builder: (context) => ButtonsScreen(),));
+        // context.pushNamed(CardsScreen.name);
         context.push(menuItem.link);
       },
     );

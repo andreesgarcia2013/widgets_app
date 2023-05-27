@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_item.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
    
@@ -21,20 +22,17 @@ class _HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView.builder(
-        itemCount: appMenuItems.length,
-        itemBuilder: (context, index) {
-          final menuItem=appMenuItems[index];
-          return _CustomListTile(menuItem: menuItem);
-        },),
-    );
+    return ListView.builder(
+      itemCount: appMenuItems.length,
+      itemBuilder: (context, index) {
+        final menuItem=appMenuItems[index];
+        return _CustomListTile(menuItem: menuItem);
+      },);
   }
 }
 
 class _CustomListTile extends StatelessWidget {
   const _CustomListTile({
-    super.key,
     required this.menuItem,
   });
 
@@ -50,6 +48,7 @@ class _CustomListTile extends StatelessWidget {
       trailing: Icon(Icons.arrow_forward_ios, color: colors.primary),
       onTap: () {
         //TODO: Navegar a otras pantallas
+        Navigator.of(context).push(MaterialPageRoute(builder: (context) => ButtonsScreen(),));
       },
     );
   }

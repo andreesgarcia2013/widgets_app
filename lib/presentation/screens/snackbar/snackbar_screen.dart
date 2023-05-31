@@ -17,15 +17,15 @@ class SnackbarScreen extends StatelessWidget {
     showDialog(context: context,
     barrierDismissible: false, 
       builder: (context) => AlertDialog(
-        title: Text('Estas seguro'),
-        content: Text('Cillum consequat tempor ad occaecat duis sint consectetur aliqua velit fugiat et officia fugiat.'),
+        title: const Text('Estas seguro'),
+        content: const Text('Cillum consequat tempor ad occaecat duis sint consectetur aliqua velit fugiat et officia fugiat.'),
         actions: [
           TextButton(onPressed: (){
             context.pop();
-          }, child: Text('close')),
+          }, child: const Text('close')),
           FilledButton(onPressed: (){
             context.pop();
-          }, child: Text('Aceptar'))
+          }, child: const Text('Aceptar'))
         ],
       ),
     );
@@ -34,7 +34,7 @@ class SnackbarScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Snackbar y dialogos'),
+        title: const Text('Snackbar y dialogos'),
       ),
       body: Center(
         child: Column(
@@ -43,11 +43,11 @@ class SnackbarScreen extends StatelessWidget {
             FilledButton.tonal(onPressed: (){
               showAboutDialog(context: context,
                 children: [
-                  Text('Ea pariatur quis cillum nulla aliquip exercitation dolore exercitation non proident.')
+                  const Text('Ea pariatur quis cillum nulla aliquip exercitation dolore exercitation non proident.')
                 ]
               );
-            }, child: Text('Licencias')),
-            FilledButton.tonal(onPressed: ()=>openDialog(context), child: Text('Mostrar dialogo'))
+            }, child: const Text('Licencias')),
+            FilledButton.tonal(onPressed: ()=>openDialog(context), child: const Text('Mostrar dialogo'))
           ],
         ),
       ),

@@ -16,7 +16,7 @@ class CardsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CardsScreen'),
+        title: const Text('CardsScreen'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -25,7 +25,7 @@ class CardsScreen extends StatelessWidget {
               ...cards.map((card) =>  _CardType2(label: card['label'], elevation: card['elevation'])),
               ...cards.map((card) =>  _CardType3(label: card['label'], elevation: card['elevation'])),
               ...cards.map((card) =>  _CardType4(label: card['label'], elevation: card['elevation'])),
-              SizedBox(height: 50,)
+              const SizedBox(height: 50,)
            ],
         ),
       ),
@@ -46,7 +46,7 @@ class _CardType1 extends StatelessWidget {
         child: Column(children: [
           Align(
             alignment: Alignment.topRight,
-            child: IconButton( onPressed: () {},icon: Icon(Icons.more_vert_outlined))
+            child: IconButton( onPressed: () {},icon: const Icon(Icons.more_vert_outlined))
           ),
           Align(
             alignment: Alignment.bottomLeft,
@@ -67,7 +67,7 @@ class _CardType2 extends StatelessWidget {
     final colors=Theme.of(context).colorScheme;
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(12)),
+        borderRadius: const BorderRadius.all(Radius.circular(12)),
         side: BorderSide(
           color: colors.outline
         )
@@ -78,7 +78,7 @@ class _CardType2 extends StatelessWidget {
         child: Column(children: [
           Align(
             alignment: Alignment.topRight,
-            child: IconButton( onPressed: () {},icon: Icon(Icons.more_vert_outlined))
+            child: IconButton( onPressed: () {},icon: const Icon(Icons.more_vert_outlined))
           ),
           Align(
             alignment: Alignment.bottomLeft,
@@ -105,7 +105,7 @@ class _CardType3 extends StatelessWidget {
         child: Column(children: [
           Align(
             alignment: Alignment.topRight,
-            child: IconButton( onPressed: () {},icon: Icon(Icons.more_vert_outlined))
+            child: IconButton( onPressed: () {},icon: const Icon(Icons.more_vert_outlined))
           ),
           Align(
             alignment: Alignment.bottomLeft,
@@ -133,11 +133,11 @@ class _CardType4 extends StatelessWidget {
         Align(
           alignment: Alignment.topRight,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.only(bottomLeft: Radius.circular(20))
             ),
-            child: IconButton( onPressed: () {},icon: Icon(Icons.more_vert_outlined)))
+            child: IconButton( onPressed: () {},icon: const Icon(Icons.more_vert_outlined)))
         ),
       ]),
     );

@@ -8,17 +8,15 @@ class ProgressScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('progress Indicator'),
+        title: const Text('progress Indicator'),
       ),
-      body: _ProgressView(),
+      body: const _ProgressView(),
     );
   }
 }
 
 class _ProgressView extends StatelessWidget {
-  const _ProgressView({
-    super.key,
-  });
+  const _ProgressView();
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +55,7 @@ class _ControllerProgressIndicator extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircularProgressIndicator(value: progressValue, strokeWidth: 2, backgroundColor: Colors.black26,),
-            SizedBox(width: 20,),
+            const SizedBox(width: 20,),
             Expanded(child: LinearProgressIndicator(value: progressValue,))
           ],
         ),

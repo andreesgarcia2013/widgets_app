@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/screens/screens.dart';
-// GoRouter configuration
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
+import 'package:widgets_app/presentation/screens/screens.dart';// GoRouter configuration
 final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
@@ -48,6 +48,16 @@ final appRouter = GoRouter(
       name: UIControllsScreen.name,
       path: '/uicontrolls',
       builder: (context, state) => const UIControllsScreen(),
+    ),
+    GoRoute(
+      name: CounterScreen.name,
+      path: '/counter',
+      builder: (context, state) => const CounterScreen(),
+    ),
+    GoRoute(
+      name: ThemeChangerScreen.name,
+      path: '/theme',
+      builder: (context, state) => const ThemeChangerScreen(),
     ),
   ],
 );
